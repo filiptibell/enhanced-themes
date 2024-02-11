@@ -1,0 +1,14 @@
+{
+    "languages": {
+        "JSON": {
+            "format_on_save": "on",
+            "formatter": "prettier",
+            "tab_size": 4
+        },
+        "Markdown": {
+            "format_on_save": "on",
+            "formatter": "prettier",
+            "tab_size": 2
+        }
+    }
+}
