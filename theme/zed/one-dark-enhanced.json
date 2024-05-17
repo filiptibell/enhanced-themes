@@ -242,11 +242,6 @@
                         "font_style": null,
                         "font_weight": 300
                     },
-                    "constructor": {
-                        "color": "#E06C75",
-                        "font_style": null,
-                        "font_weight": null
-                    },
                     "embedded": {
                         "color": "#ABB2BF",
                         "font_style": null,
@@ -267,8 +262,18 @@
                         "font_style": null,
                         "font_weight": 300
                     },
+                    "enum.variant": {
+                        "color": "#56B6C2",
+                        "font_style": null,
+                        "font_weight": 300
+                    },
                     "function": {
                         "color": "#61AFEF",
+                        "font_style": null,
+                        "font_weight": null
+                    },
+                    "function.builtin": {
+                        "color": "#56B6C2",
                         "font_style": null,
                         "font_weight": null
                     },

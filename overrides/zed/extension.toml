@@ -1,0 +1,15 @@
+id = "one-dark-enhanced"
+name = "One Dark Enhanced"
+version = "0.0.1"
+schema_version = 1
+description = "One Dark Enhanced theme"
+repository = "https://github.com/filiptibell/one-dark-enhanced"
+authors = []
+themes = []
+languages = ["languages/rust"]
+
+[lib]
+
+[grammars]
+
+[language_servers]
