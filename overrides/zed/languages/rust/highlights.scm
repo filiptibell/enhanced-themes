@@ -54,8 +54,7 @@
 (enum_variant
   name: (identifier) @enum.variant)
 
-; Highlight enum variants such as EnumName::VariantName, this
-; may not be entirely accurate, but much better than nothing
+; Highlight enum variants such as EnumName::VariantName
 (scoped_identifier
   path: (identifier) @type
   "::"
@@ -63,15 +62,33 @@
   (#match? @type "^[A-Z]")
   (#match? @enum.variant "^[A-Z]"))
 
-; Highlight the special "Self" struct type
-(struct_expression
-  name: (_) @variable.special
-  body: (field_initializer_list
-    "{" @type
-    "}" @type)
+; Highlight enum variants in some other special cases: let Enum(_), return Enum(_)
+; This may have some false positives with unit structs, but is generally better
+(tuple_struct_pattern
+  type: (identifier) @enum.variant
+  "("
+  (identifier)
+  ")"
+  (#match? @enum.variant "^[A-Z]"))
+(call_expression
+  function: (identifier) @enum.variant
+  (arguments)
+  (#match? @enum.variant "^[A-Z]"))
+
+; Highlight the special "Self" type identifier
+((identifier) @variable.special
   (#eq? @variable.special "Self"))
 
-; TODO: Highlight the special "Self" type in return types
+((type_identifier) @variable.special
+  (#eq? @variable.special "Self"))
+
+; Highlight the special "Self" type when it is an enum
+(scoped_identifier
+  path: (identifier) @variable.special
+  "::"
+  name: (identifier) @enum.variant
+  (#eq? @variable.special "Self")
+  (#match? @enum.variant "^[A-Z]"))
 
 [
   "("
