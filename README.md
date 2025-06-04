@@ -1,16 +1,15 @@
-# One Dark Enhanced
+# Enhanced Themes
 
-Customized editor theme, loosely based on the [Zed](https://zed.dev) One Dark theme, and the [One Dark Pro](https://github.com/Binaryify/OneDark-Pro) theme for [Visual Studio Code](https://code.visualstudio.com).
+Customized editor themes, loosely based on existing themes:
 
-## Preview
+- One Dark Pro
+- GitHub Classic
 
-![Preview Image](./assets/screenshot.png)
+## Preview Images
 
-## Installation
-
-The theme is currently available for:
-
-- The preview version of Zed - [Installation Instructions](https://zed.dev/blog/user-themes-now-in-preview)
+![Preview - One Dark Enhanced](./assets/one-dark.png)
+![Preview - GitHub Dark Enhanced](./assets/github-dark.png)
+![Preview - GitHub Light Enhanced](./assets/github-light.png)
 
 ## Goals & Motivation
 
